@@ -60,6 +60,40 @@ a:active { text-decoration: none; color: #343C37;}
     padding-left: 1rem;
 }
 
+.nav-menu a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.nav-menu button{
+    background-color: #353C38;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+.nav-menu button:hover {
+    background-color: #beccc0;
+    color: #343C38;
+}
+
 /* page 1 content */ 
 
 .hero {
@@ -78,19 +112,7 @@ a:active { text-decoration: none; color: #343C37;}
     justify-content: center; 
 }
 
-.hero button, .nav-menu button{
-    background-color: #353C38;
-    border: none;
-    color: white;
-    padding: 8px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-}
+
 
 .hero a:link { text-decoration: none; color: white; }
         
@@ -250,11 +272,16 @@ a:active { text-decoration: none; color: #343C37;}
 
 /* page footer */
 
-footer {
+.site-footer {
+    border-top: 2px solid #343C38;
     background-color: #5B695D;
     display: flex;
     justify-content: space-between;
     padding: 20px;
+}
+
+.site-footer a {
+    color: white;
 }
 
 .column {
@@ -290,3 +317,5 @@ footer {
     text-align: left;
     padding-left: 10vw;
 }
+
+/* testimonials */
