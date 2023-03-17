@@ -20,6 +20,11 @@ body {
     background-color: #FAF9F6;
     max-width: 100vw;
 }
+
+img {
+    pointer-events: none;
+}
+
 a:link { text-decoration: none; color: #343C37; }
         
 a:visited { text-decoration: none; color: #343C37;}
@@ -60,16 +65,16 @@ a:active { text-decoration: none; color: #343C37;}
     padding-left: 1rem;
 }
 
-.nav-menu a::after {
+.nav-link a::after {
     content: '';
     display: block;
     width: 0;
     height: 2px;
-    background: #000;
+    background: #343C38;
     transition: width .3s;
 }
 
-.nav-menu a:hover::after {
+.nav-link a:hover::after {
     width: 100%;
     transition: width .3s;
 }
@@ -112,8 +117,6 @@ a:active { text-decoration: none; color: #343C37;}
     justify-content: center; 
 }
 
-
-
 .hero a:link { text-decoration: none; color: white; }
         
 .hero a:visited { text-decoration: none; color: white;}
@@ -121,7 +124,6 @@ a:active { text-decoration: none; color: #343C37;}
 .hero a:hover { text-decoration: none; color: white;}
 
 .hero a:active { text-decoration: none; color: white;}
-
 
 #img-blur {
     position: relative;
@@ -199,6 +201,7 @@ a:active { text-decoration: none; color: #343C37;}
     position: relative;
     -webkit-transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
 }
 
 .portfolio-tile:after{
@@ -318,4 +321,71 @@ a:active { text-decoration: none; color: #343C37;}
     padding-left: 10vw;
 }
 
-/* testimonials */
+/* testimonials page */
+
+.accordion {
+    margin: 10vh auto 10vh auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 90vw;
+    border-radius: 2px;
+    overflow: hidden;
+    border-top: 2px solid #343C38;
+    border-left: 2px solid #343C38;
+    border-right: 2px solid #343C38;
+}
+
+.accordion img {
+    max-height: 40vh;
+    padding: none;
+}
+
+
+.accordion__label {
+  padding: 14px 20px;
+  display: flex;
+}
+
+.accordion__label {
+  display: block;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  border-bottom: 2px solid #343C38;
+}
+
+.accordion__label:hover {
+    background-color: #343c38;
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.accordion__content {
+    display: none;
+    border-bottom: 2px solid #343C38;
+    padding: 2%;
+    margin: 0;
+}
+
+.accordion__content p {
+    padding: 2%;  
+    margin: 0;  
+}
+
+.accordion__input {
+  display: none;
+}
+
+.accordion__input:checked ~ .accordion__content {
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+.accordion__input:checked ~ .accordion__label {
+    border-bottom: 1px solid #343C38;
+    background-color: #343c38;
+    color: white;
+    transition-duration: 0.4s;
+}
