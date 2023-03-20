@@ -315,6 +315,7 @@ a:active { text-decoration: none; color: #343C37;}
     flex-direction: column;
 }
 
+
 .portfolio-block p {
     width: 100%;
     text-align: left;
@@ -392,6 +393,7 @@ a:active { text-decoration: none; color: #343C37;}
 
 /* contact page */
 
+<<<<<<< Updated upstream
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -416,4 +418,46 @@ a:active { text-decoration: none; color: #343C37;}
 
 input {
     width: 100%;
+=======
+.form-container {
+    color: #343c38;
+}
+
+.contact-form {
+    max-width: 90%;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-row .input-group {
+    flex-basis: 47%;
+}
+
+.input-group {
+    margin-bottom: 30px;
+}
+
+.form-container input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0px;
+    border: 1px solid #beccc0;
+    background-color: #f9f9f9;
+    font-size: 15px;
+    resize: none;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.form-container button {
+    padding: 10px 0;
+    outline: none;
+    background: #beccc0;
+    border: 1px solid #343C38;
+    width: 20%;
+    cursor: pointer;
+>>>>>>> Stashed changes
 }
